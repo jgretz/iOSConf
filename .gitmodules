@@ -1,0 +1,3 @@
+[submodule "CoreMeta"]
+	path = CoreMeta
+	url = https://jgretz@github.com/jgretz/CoreMeta.git
