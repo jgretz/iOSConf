@@ -10,7 +10,7 @@
 
 @implementation ArrayBasedRepository
 
-@synthesize serializer, data, lastUpdated;
+@synthesize cerealizer, data, lastUpdated;
 
 #pragma mark - To Override
 -(NSString*) filename {
@@ -87,7 +87,7 @@
     
     NSMutableArray* array = nil;
     if (stringData)
-        array = [self.serializer createArrayOfType: classType fromString: stringData];
+        array = [self.cerealizer createArrayOfType: classType fromString: stringData];
     if (!array)
         array = [NSMutableArray array];
     
@@ -95,7 +95,7 @@
 }
 
 -(void) array: (NSArray*) array toFile: (NSString*) fileName {
-    NSString* stringData = [self.serializer toString: array];
+    NSString* stringData = [self.cerealizer toString: array];
     [stringData writeToFile: fileName atomically: NO encoding: NSUTF8StringEncoding error: nil];
 }
 

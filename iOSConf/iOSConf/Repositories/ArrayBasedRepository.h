@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "iSerializer.h"
+#import "Cerealizer.h"
 
 @interface ArrayBasedRepository : NSObject
 
-@property (retain) id<iSerializer> serializer;
+@property (retain) id<Cerealizer> cerealizer;
 @property (retain) NSMutableArray* data;
 
 @property (readonly) NSString* filename;
