@@ -9,17 +9,29 @@
 #import "SplashVC.h"
 #import "AppLoad.h"
 
-
-@implementation SplashVC
+@implementation SplashVC {
+    NSDate* start;
+}
 
 -(void) viewDidAppear: (BOOL) animated {
     [super viewDidAppear: animated];
 
+    start = [NSDate now];
     [self performBlockInBackground: ^{
         [[AppLoad object] loadApp];
 
-        [self performBlockInMainThread: self.loadComplete];
+        [self performSelectorOnMainThread: @selector(complete) withObject: nil waitUntilDone: NO];
     }];
+}
+
+-(void) complete {
+    NSTimeInterval wait = [NSDate.now timeIntervalSinceDate: start];
+    if (wait < 3) {
+        [self performSelector: @selector(complete) withObject: nil afterDelay: wait];
+        return;
+    }
+    
+    self.loadComplete();
 }
 
 @end

@@ -16,6 +16,10 @@
 		8CCCD0B61743306E005EB2EB /* libCoreMeta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CCCD0B017432FA3005EB2EB /* libCoreMeta.a */; };
 		8CCCD0C017433336005EB2EB /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CCCD0BF17433336005EB2EB /* MainVC.xib */; };
 		8CCCD0CF17433B5A005EB2EB /* SplashVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CCCD0CE17433B5A005EB2EB /* SplashVC.xib */; };
+		8CD13B351747E1F3003043C6 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CD13B301747E1F3003043C6 /* background.png */; };
+		8CD13B391747E1F3003043C6 /* pgh-tech-fest-logo-cc.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CD13B341747E1F3003043C6 /* pgh-tech-fest-logo-cc.png */; };
+		8CD13B3B1747E210003043C6 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CD13B3A1747E210003043C6 /* icon.png */; };
+		8CD13B3D1747E213003043C6 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CD13B3C1747E213003043C6 /* icon@2x.png */; };
 		8CF7C62B1747D1270081658A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF7C62A1747D1270081658A /* libxml2.dylib */; };
 		BAC280C43A6D8954DF408530 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BAC28C4C12F97132AE583199 /* Default.png */; };
 		BAC281197B7FB4B6E56FB290 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC28BADA6C8DE173A87F8EB /* AFPropertyListRequestOperation.m */; };
@@ -89,6 +93,10 @@
 		8CCCD0AA17432FA3005EB2EB /* CoreMeta.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoreMeta.xcodeproj; path = ../CoreMeta/CoreMeta/CoreMeta.xcodeproj; sourceTree = "<group>"; };
 		8CCCD0BF17433336005EB2EB /* MainVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
 		8CCCD0CE17433B5A005EB2EB /* SplashVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashVC.xib; sourceTree = "<group>"; };
+		8CD13B301747E1F3003043C6 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		8CD13B341747E1F3003043C6 /* pgh-tech-fest-logo-cc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pgh-tech-fest-logo-cc.png"; sourceTree = "<group>"; };
+		8CD13B3A1747E210003043C6 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../../icon.png; sourceTree = "<group>"; };
+		8CD13B3C1747E213003043C6 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../../../icon@2x.png"; sourceTree = "<group>"; };
 		8CF7C62A1747D1270081658A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		BAC28147C894A5B5DCFB3C27 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		BAC281D798562FC7FDC7C0C6 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
@@ -164,7 +172,6 @@
 			children = (
 				8CCCD09317432EEB005EB2EB /* iOSConf */,
 				8CCCD08C17432EEB005EB2EB /* Frameworks */,
-				8CF7C62A1747D1270081658A /* libxml2.dylib */,
 				8CCCD08B17432EEB005EB2EB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -183,6 +190,7 @@
 				8CA74BCE1747CE800059BD83 /* Cereal.xcodeproj */,
 				8CCCD0AA17432FA3005EB2EB /* CoreMeta.xcodeproj */,
 				BAC2834D00BD6E59DAE41FE7 /* AFNetworking */,
+				8CF7C62A1747D1270081658A /* libxml2.dylib */,
 				8CA74BD81747CF0A0059BD83 /* MobileCoreServices.framework */,
 				8CA74BD61747CF000059BD83 /* SystemConfiguration.framework */,
 				8CCCD08D17432EEB005EB2EB /* UIKit.framework */,
@@ -212,6 +220,17 @@
 				8CCCD0B217432FA3005EB2EB /* CoreMetaTests.octest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8CD13B2F1747E1F3003043C6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8CD13B3C1747E213003043C6 /* icon@2x.png */,
+				8CD13B3A1747E210003043C6 /* icon.png */,
+				8CD13B301747E1F3003043C6 /* background.png */,
+				8CD13B341747E1F3003043C6 /* pgh-tech-fest-logo-cc.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		BAC2834D00BD6E59DAE41FE7 /* AFNetworking */ = {
@@ -254,8 +273,8 @@
 				BAC2842733C597BA4DDDE8E5 /* MainVC.h */,
 				BAC288EDBA1A490A639D6592 /* AppDelegate.h */,
 				BAC28C24F97FE76CAC4514BB /* AppDelegate.m */,
-				BAC286F24711C066D075F909 /* SplashVC.m */,
 				BAC287BD28BB1686316E1A46 /* SplashVC.h */,
+				BAC286F24711C066D075F909 /* SplashVC.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -296,6 +315,7 @@
 		BAC287A846C2843E85800A90 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8CD13B2F1747E1F3003043C6 /* Images */,
 				BAC2875EC586CABFFF3BCA24 /* Supporting Files */,
 			);
 			path = Resources;
@@ -423,6 +443,10 @@
 				BAC28BCFB38A76EF62FB5229 /* Default-568h@2x.png in Resources */,
 				8CCCD0C017433336005EB2EB /* MainVC.xib in Resources */,
 				8CCCD0CF17433B5A005EB2EB /* SplashVC.xib in Resources */,
+				8CD13B351747E1F3003043C6 /* background.png in Resources */,
+				8CD13B391747E1F3003043C6 /* pgh-tech-fest-logo-cc.png in Resources */,
+				8CD13B3B1747E210003043C6 /* icon.png in Resources */,
+				8CD13B3D1747E213003043C6 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

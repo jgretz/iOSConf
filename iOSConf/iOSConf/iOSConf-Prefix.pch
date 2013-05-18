@@ -16,5 +16,6 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 
 #import "CoreMeta.h"
+#import "NSDate+Helpers.h"
 
 #endif
