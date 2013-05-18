@@ -1,3 +1,6 @@
 [submodule "CoreMeta"]
 	path = CoreMeta
 	url = https://jgretz@github.com/jgretz/CoreMeta.git
+[submodule "AFNetworking"]
+	path = AFNetworking
+	url = https://jgretz@github.com/AFNetworking/AFNetworking.git
