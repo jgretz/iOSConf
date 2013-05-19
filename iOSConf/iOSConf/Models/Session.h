@@ -14,8 +14,8 @@
 @property (copy) NSString* title;
 @property (copy) NSString* track;
 @property (copy) NSDate* time;
-@property (copy) NSString* presenterName;
-@property (copy) NSString* presenterId;
+@property (copy) NSString* speakerName;
+@property (copy) NSString* speakerId;
 @property (copy) NSString* description;
 @property (copy) NSString* room;
 @property BOOL active;

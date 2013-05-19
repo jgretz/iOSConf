@@ -9,10 +9,13 @@
 #import "SessionVC.h"
 #import "NSDate+String.h"
 #import "MyScheduleRepository.h"
+#import "SpeakerRepository.h"
+#import "SpeakerVC.h"
 
 @interface SessionVC()
 
 @property (strong) MyScheduleRepository* myScheduleRepository;
+@property (strong) SpeakerRepository* speakerRepository;
 
 @end
 
@@ -22,7 +25,7 @@
     [super viewDidLoad];
 
     self.titleLabel.text = self.session.title;
-    self.speaker.text = self.session.presenterName;
+    self.speaker.text = self.session.speakerName;
     self.room.text = self.session.room;
     self.time.text = self.session.time.timeString;
     self.track.text = self.session.track;
@@ -38,7 +41,10 @@
 
 #pragma mark - Actions
 -(IBAction) viewSpeaker {
+    SpeakerVC* vc = [SpeakerVC object];
+    vc.speaker = [self.speakerRepository speakerById: self.session.speakerId];
 
+    [self.navigationController pushViewController: vc animated: YES];
 }
 
 -(void) toggleScheduled {

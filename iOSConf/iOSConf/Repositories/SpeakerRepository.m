@@ -19,4 +19,11 @@
     return [Speaker class];
 }
 
+-(Speaker*) speakerById: (NSString*) speakerId {
+    return [self.data firstWhere: ^BOOL(Speaker* evaluatedObject) {
+        return [evaluatedObject.id isEqual: speakerId];
+    }];
+}
+
+
 @end

@@ -83,7 +83,7 @@
 }
 
 -(NSString*) buildDetailForSession: (Session*) session forGrouping: (SessionGrouping) grouping {
-    NSString* detail = [NSString stringWithFormat: @"%@\n%@", session.presenterName, session.room];
+    NSString* detail = [NSString stringWithFormat: @"%@\n%@", session.speakerName, session.room];
     switch (grouping) {
         case SessionGroupingTime:
             detail = [detail stringByAppendingFormat: @"\n%@", session.track];

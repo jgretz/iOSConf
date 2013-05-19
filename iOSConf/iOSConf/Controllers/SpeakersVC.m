@@ -10,6 +10,7 @@
 #import "SpeakersVC.h"
 #import "SpeakerRepository.h"
 #import "Speaker.h"
+#import "SpeakerVC.h"
 
 @interface SpeakersVC()<UITableViewDataSource, UITableViewDelegate>
 
@@ -87,6 +88,10 @@
 -(void) tableView: (UITableView*) tableView didSelectRowAtIndexPath: (NSIndexPath*) indexPath {
     [tableView deselectRowAtIndexPath: indexPath animated: NO];
 
+    SpeakerVC* vc = [SpeakerVC object];
+    vc.speaker = self.speakers[self.speakerSections[indexPath.section]][indexPath.row];
+
+    [self.navigationController pushViewController: vc animated: YES];
 }
 
 #pragma mark - Sort Sessions

@@ -13,8 +13,8 @@
     [super map: source into: target];
 
     target.active = [source.active isEqual: @"1"];
-    target.presenterId = source.presenter_id;
-    target.presenterName = source.presenter;
+    target.speakerId = source.presenter_id;
+    target.speakerName = source.presenter;
 
     NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat: @"hh:mm a"];

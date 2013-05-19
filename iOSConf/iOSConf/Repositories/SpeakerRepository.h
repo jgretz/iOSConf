@@ -6,6 +6,10 @@
 //
 
 #import "ArrayBasedRepository.h"
+#import "Speaker.h"
 
 @interface SpeakerRepository : ArrayBasedRepository
+
+-(Speaker*) speakerById: (NSString*) speakerId;
+
 @end

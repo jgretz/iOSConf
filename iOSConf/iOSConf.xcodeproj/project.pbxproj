@@ -23,6 +23,8 @@
 		8CD13B391747E1F3003043C6 /* pgh-tech-fest-logo-cc.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CD13B341747E1F3003043C6 /* pgh-tech-fest-logo-cc.png */; };
 		8CD13B3B1747E210003043C6 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CD13B3A1747E210003043C6 /* icon.png */; };
 		8CD13B3D1747E213003043C6 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CD13B3C1747E213003043C6 /* icon@2x.png */; };
+		8CEDB581174898540076FC52 /* SpeakerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEDB57F174898540076FC52 /* SpeakerVC.m */; };
+		8CEDB58B17489D100076FC52 /* BrowserVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEDB58917489D100076FC52 /* BrowserVC.m */; };
 		8CF7C62B1747D1270081658A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF7C62A1747D1270081658A /* libxml2.dylib */; };
 		BAC280346C986785122F9DE5 /* Speaker.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC28393B42D6615328D708C /* Speaker.m */; };
 		BAC280B70DA226D0D5604F73 /* SessionService.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC2896CBD06043E5EBC3D03 /* SessionService.m */; };
@@ -32,7 +34,6 @@
 		BAC2815EDCB148AF3D1E812D /* AppLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC285DF0F4FDD3F5E88AF17 /* AppLoad.m */; };
 		BAC28181B1B96728C2D33D07 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC286D248590683A2C5D346 /* AFXMLRequestOperation.m */; };
 		BAC281C0722237A0A2B6CC0C /* SessionRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC286B2BAC033F109BDD523 /* SessionRepository.m */; };
-		BAC281D237EFFB4C262AF78E /* segmented-middle-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = BAC28789DFAD5EF83CF90A6F /* segmented-middle-selected.png */; };
 		BAC281EF8DE2458EB6293606 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC28DFE8F2C074BFB2D28A0 /* AFHTTPRequestOperation.m */; };
 		BAC2821C52D0756645634D9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC28F8E148E164BA43D59C0 /* main.m */; };
 		BAC2822CF0039D9E2EA36C70 /* SessionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAC284DD08C5D2EE46F6A51C /* SessionVC.xib */; };
@@ -42,41 +43,37 @@
 		BAC284796C6391ACAADE47A2 /* SpeakerRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC288456AB4414DB7B8DEF4 /* SpeakerRepository.m */; };
 		BAC284DFBF598681CCE77727 /* ContainerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC28952AF32C4F842EEBF8A /* ContainerConfig.m */; };
 		BAC285588148BC02CDFAD9B6 /* PghTechFestSpeakerToSpeakerMap.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC28BAD7595F2F5BF9D17FC /* PghTechFestSpeakerToSpeakerMap.m */; };
-		BAC2860B7036A5784DDFB5FE /* navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAC2812D046BD891137DA99D /* navbar@2x.png */; };
-		BAC286B67A83577FFE3E5155 /* tabbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAC28BE986AC0185ADD87195 /* tabbar@2x.png */; };
-		BAC286F4289F23D1978BD37E /* tabbar-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = BAC280C5EA3AE6A875984430 /* tabbar-selected.png */; };
+		BAC285BCE279207B55446859 /* SpeakerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAC28CCE5A6997DD7F439D1C /* SpeakerVC.xib */; };
+		BAC286B0166359ACBA6E051D /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = BAC28491AFF694EC9D5F6C39 /* back.png */; };
+		BAC286CAB07948B888FEC7D4 /* frwd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAC28083A624DB836B93C564 /* frwd@2x.png */; };
 		BAC28712480C7CE4ED3DCD4E /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC287BA0C48EF971189D30C /* AFNetworkActivityIndicatorManager.m */; };
 		BAC2871A3FFDC21BC224C036 /* PghTechFestApiSession.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC28F9703ECA2CBDA6EEAE3 /* PghTechFestApiSession.m */; };
 		BAC287242BF6361AAAD081C7 /* PghTechFestMappingConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC28AAE15D555DC6099C55A /* PghTechFestMappingConfiguration.m */; };
 		BAC2879A1F1377BD2D0F3D98 /* ContentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC282AF19BE9BB73F518109 /* ContentVC.m */; };
+		BAC28863593622C225D83C15 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAC2839D3A087E18873F1C2A /* back@2x.png */; };
+		BAC2888974F90103D96DD41D /* frwd.png in Resources */ = {isa = PBXBuildFile; fileRef = BAC28D3318702D6DFD98FC5C /* frwd.png */; };
 		BAC288D8ECA6976BD13A2F55 /* cellbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = BAC286C15A9961D18176E4D4 /* cellbackground.png */; };
 		BAC288E98247BA172029609A /* NSDate+String.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC285808D4CC9371ABDA05C /* NSDate+String.m */; };
 		BAC288FE3E960E767A45FC98 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAC28AF3B818C4270059DFD6 /* Default@2x.png */; };
 		BAC289403A18AC9DC6386887 /* SplashVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC286F24711C066D075F909 /* SplashVC.m */; };
 		BAC28966A542704870AF3FAF /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC28F63C3E8C55AB74FCD80 /* AFURLConnectionOperation.m */; };
-		BAC28986420BD1216AAF449C /* navbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = BAC28EA0A7637E563064E542 /* navbutton.png */; };
 		BAC289A14FCCB1A2605067E6 /* ArrayBasedRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC28D42D17E184C75A8DD31 /* ArrayBasedRepository.m */; };
-		BAC289AE3336B6C9366A26D6 /* segmented-left-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = BAC28163616CC29391DBDE2A /* segmented-left-selected.png */; };
 		BAC289B1E6E88EF1EFDD02B5 /* PghTechFestApiSpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC28D19DED4DD7DECF5FB8C /* PghTechFestApiSpeaker.m */; };
 		BAC28A23D0BD80648ECFB9E9 /* Path.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC28E89E720D09150F3C448 /* Path.m */; };
 		BAC28A625E08FCBDDF20655D /* SpeakersVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAC28532F30DF2B654CC60BD /* SpeakersVC.xib */; };
 		BAC28A64D14D712D34BD722B /* SessionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC285C6C6D6D9C4F48CA05A /* SessionsVC.m */; };
 		BAC28A685B366040615967FA /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC28D95CCB64251D4F21045 /* AFImageRequestOperation.m */; };
 		BAC28A9CF2C0BABDA01FC304 /* PghTechFestApiSessions.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC281631A014E550835027D /* PghTechFestApiSessions.m */; };
-		BAC28AB78544E9D77926767B /* segmented-right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAC281E0D409591360E33DC6 /* segmented-right@2x.png */; };
 		BAC28B6B58F8F5F96F41AA8A /* PghTechFestApiSpeakers.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC2897EA38AFF6D3A4F7E7E /* PghTechFestApiSpeakers.m */; };
 		BAC28B955B85883645B3AC74 /* SessionDisplayService.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC282047ABF2D837B209609 /* SessionDisplayService.m */; };
 		BAC28BC4C11107FC46E5F34C /* PghTechFestSpeakerService.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC28DA48171CF8D6FF21C24 /* PghTechFestSpeakerService.m */; };
 		BAC28BC6A811AC28A105E114 /* PghTechFestSessionToSessionMap.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC28E7DD8BB010D4A09D0C3 /* PghTechFestSessionToSessionMap.m */; };
-		BAC28BCCA51664BCCA08A105 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = BAC288125AAFCA0024CFA19A /* back.png */; };
 		BAC28BCFB38A76EF62FB5229 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAC284BB947EBB16DF665275 /* Default-568h@2x.png */; };
 		BAC28BDEB70CA430856A4ED3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BAC28649A027D3CF59A6B92F /* InfoPlist.strings */; };
 		BAC28C2C29CC0900DF722A10 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC28147C894A5B5DCFB3C27 /* UIImageView+AFNetworking.m */; };
-		BAC28C4A61BA706F748CD481 /* segmented-middle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAC280131DBFF2159A4C7686 /* segmented-middle@2x.png */; };
 		BAC28C4FCDF76EA6EFFAF995 /* PghTechFestSessionService.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC2893BE3E72F1177E4CC78 /* PghTechFestSessionService.m */; };
-		BAC28C6F84436AF73883F162 /* segmented-left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAC28B9142100EA9888FC3D6 /* segmented-left@2x.png */; };
 		BAC28CB4EFB19C54D2CC92BD /* ScheduleVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAC284DD29935146141AA88A /* ScheduleVC.xib */; };
-		BAC28CB5028B770CF77BCEBA /* segmented-right-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = BAC28F31A198C097DF2CD2EC /* segmented-right-selected.png */; };
+		BAC28CCB34C70D716256B21B /* BrowserVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAC28D2C9622F33D4A62F6BD /* BrowserVC.xib */; };
 		BAC28CFDEC1582A2E6E397E2 /* Scheduled.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC28E5089F6472E6D5B5889 /* Scheduled.m */; };
 		BAC28E220E038D26479DFBFE /* SpeakerService.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC286D3377143EE1E8DA9D6 /* SpeakerService.m */; };
 		BAC28F37299059DDA48353BA /* MyScheduleRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC2826CFED5347CDE58CFCC /* MyScheduleRepository.m */; };
@@ -144,19 +141,19 @@
 		8CD13B341747E1F3003043C6 /* pgh-tech-fest-logo-cc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pgh-tech-fest-logo-cc.png"; sourceTree = "<group>"; };
 		8CD13B3A1747E210003043C6 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../../icon.png; sourceTree = "<group>"; };
 		8CD13B3C1747E213003043C6 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../../../icon@2x.png"; sourceTree = "<group>"; };
+		8CEDB57E174898540076FC52 /* SpeakerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerVC.h; sourceTree = "<group>"; };
+		8CEDB57F174898540076FC52 /* SpeakerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakerVC.m; sourceTree = "<group>"; };
+		8CEDB58817489D100076FC52 /* BrowserVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserVC.h; sourceTree = "<group>"; };
+		8CEDB58917489D100076FC52 /* BrowserVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserVC.m; sourceTree = "<group>"; };
 		8CF7C62A1747D1270081658A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		BAC280131DBFF2159A4C7686 /* segmented-middle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "segmented-middle@2x.png"; sourceTree = "<group>"; };
 		BAC280265E1C036284B91408 /* Scheduled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scheduled.h; sourceTree = "<group>"; };
+		BAC28083A624DB836B93C564 /* frwd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "frwd@2x.png"; sourceTree = "<group>"; };
 		BAC280AD296E8F25E2C45F87 /* PghTechFestSessionToSessionMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PghTechFestSessionToSessionMap.h; sourceTree = "<group>"; };
-		BAC280C5EA3AE6A875984430 /* tabbar-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-selected.png"; sourceTree = "<group>"; };
 		BAC280D18D7C13601E0587DA /* MyScheduledSessionDisplayService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyScheduledSessionDisplayService.m; sourceTree = "<group>"; };
-		BAC2812D046BD891137DA99D /* navbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar@2x.png"; sourceTree = "<group>"; };
 		BAC28147C894A5B5DCFB3C27 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		BAC2815008B2EC1FAE210B1D /* PghTechFestApiSpeakers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PghTechFestApiSpeakers.h; sourceTree = "<group>"; };
 		BAC281631A014E550835027D /* PghTechFestApiSessions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PghTechFestApiSessions.m; sourceTree = "<group>"; };
-		BAC28163616CC29391DBDE2A /* segmented-left-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "segmented-left-selected.png"; sourceTree = "<group>"; };
 		BAC281D798562FC7FDC7C0C6 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
-		BAC281E0D409591360E33DC6 /* segmented-right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "segmented-right@2x.png"; sourceTree = "<group>"; };
 		BAC282047ABF2D837B209609 /* SessionDisplayService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionDisplayService.m; sourceTree = "<group>"; };
 		BAC28245982A7FD34F1682FB /* PghTechFestApiSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PghTechFestApiSession.h; sourceTree = "<group>"; };
 		BAC2826CFED5347CDE58CFCC /* MyScheduleRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyScheduleRepository.m; sourceTree = "<group>"; };
@@ -168,9 +165,11 @@
 		BAC2831C1EF96EFA1C840BE1 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
 		BAC2834E0CC60B4CE89C6C1C /* AppLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppLoad.h; sourceTree = "<group>"; };
 		BAC28393B42D6615328D708C /* Speaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Speaker.m; sourceTree = "<group>"; };
+		BAC2839D3A087E18873F1C2A /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
 		BAC2842733C597BA4DDDE8E5 /* SessionsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionsVC.h; sourceTree = "<group>"; };
 		BAC2842F3114BAEECE68D1BB /* PghTechFestApiSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PghTechFestApiSessions.h; sourceTree = "<group>"; };
 		BAC2842FE913A900062899FC /* PghTechFestSpeakerToSpeakerMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PghTechFestSpeakerToSpeakerMap.h; sourceTree = "<group>"; };
+		BAC28491AFF694EC9D5F6C39 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		BAC2849911A02D39B48A86D9 /* MappingConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MappingConfiguration.m; sourceTree = "<group>"; };
 		BAC284BB947EBB16DF665275 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BAC284DD08C5D2EE46F6A51C /* SessionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SessionVC.xib; sourceTree = "<group>"; };
@@ -191,11 +190,9 @@
 		BAC2870EFC93223316B8C21E /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
 		BAC2871DBF6308CB78C1595C /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BAC28748D056A6C6216BF879 /* MappingConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MappingConfiguration.h; sourceTree = "<group>"; };
-		BAC28789DFAD5EF83CF90A6F /* segmented-middle-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "segmented-middle-selected.png"; sourceTree = "<group>"; };
 		BAC2879E2F6D9D704651F9A7 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		BAC287BA0C48EF971189D30C /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
 		BAC287BD28BB1686316E1A46 /* SplashVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashVC.h; sourceTree = "<group>"; };
-		BAC288125AAFCA0024CFA19A /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		BAC288210E7A27A08E510CAB /* ContainerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerConfig.h; sourceTree = "<group>"; };
 		BAC288456AB4414DB7B8DEF4 /* SpeakerRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakerRepository.m; sourceTree = "<group>"; };
 		BAC288BD95D26C00B513FA63 /* SpeakerRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerRepository.h; sourceTree = "<group>"; };
@@ -214,15 +211,16 @@
 		BAC28AF3B818C4270059DFD6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		BAC28B12630BBC600A561D72 /* iOSConf-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "iOSConf-Prefix.pch"; sourceTree = "<group>"; };
 		BAC28B19009A5B88970C9036 /* PghTechFestSpeakerService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PghTechFestSpeakerService.h; sourceTree = "<group>"; };
-		BAC28B9142100EA9888FC3D6 /* segmented-left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "segmented-left@2x.png"; sourceTree = "<group>"; };
 		BAC28BAD7595F2F5BF9D17FC /* PghTechFestSpeakerToSpeakerMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PghTechFestSpeakerToSpeakerMap.m; sourceTree = "<group>"; };
 		BAC28BADA6C8DE173A87F8EB /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
-		BAC28BE986AC0185ADD87195 /* tabbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar@2x.png"; sourceTree = "<group>"; };
 		BAC28C24F97FE76CAC4514BB /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BAC28C4C12F97132AE583199 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		BAC28CAA24867218E0C68DCC /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		BAC28CCE5A6997DD7F439D1C /* SpeakerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpeakerVC.xib; sourceTree = "<group>"; };
 		BAC28CDDED639C3635152853 /* BundleContainerConvention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BundleContainerConvention.h; sourceTree = "<group>"; };
 		BAC28D19DED4DD7DECF5FB8C /* PghTechFestApiSpeaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PghTechFestApiSpeaker.m; sourceTree = "<group>"; };
+		BAC28D2C9622F33D4A62F6BD /* BrowserVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrowserVC.xib; sourceTree = "<group>"; };
+		BAC28D3318702D6DFD98FC5C /* frwd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frwd.png; sourceTree = "<group>"; };
 		BAC28D42D17E184C75A8DD31 /* ArrayBasedRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayBasedRepository.m; sourceTree = "<group>"; };
 		BAC28D54AA40EEEC62E69F22 /* Speaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Speaker.h; sourceTree = "<group>"; };
 		BAC28D95CCB64251D4F21045 /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
@@ -236,9 +234,7 @@
 		BAC28E7DD8BB010D4A09D0C3 /* PghTechFestSessionToSessionMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PghTechFestSessionToSessionMap.m; sourceTree = "<group>"; };
 		BAC28E89E720D09150F3C448 /* Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Path.m; sourceTree = "<group>"; };
 		BAC28E8B0931BF08B109D63D /* SessionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionService.h; sourceTree = "<group>"; };
-		BAC28EA0A7637E563064E542 /* navbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbutton.png; sourceTree = "<group>"; };
 		BAC28EC9FE5E2D2D8E4AC153 /* SessionDisplayService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionDisplayService.h; sourceTree = "<group>"; };
-		BAC28F31A198C097DF2CD2EC /* segmented-right-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "segmented-right-selected.png"; sourceTree = "<group>"; };
 		BAC28F3BFF9195CB93B04676 /* Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Path.h; sourceTree = "<group>"; };
 		BAC28F63C3E8C55AB74FCD80 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
 		BAC28F8E148E164BA43D59C0 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -338,18 +334,11 @@
 				8CD13B3A1747E210003043C6 /* icon.png */,
 				8CD13B301747E1F3003043C6 /* background.png */,
 				8CD13B341747E1F3003043C6 /* pgh-tech-fest-logo-cc.png */,
-				BAC28163616CC29391DBDE2A /* segmented-left-selected.png */,
-				BAC288125AAFCA0024CFA19A /* back.png */,
-				BAC280C5EA3AE6A875984430 /* tabbar-selected.png */,
-				BAC280131DBFF2159A4C7686 /* segmented-middle@2x.png */,
-				BAC28B9142100EA9888FC3D6 /* segmented-left@2x.png */,
-				BAC28789DFAD5EF83CF90A6F /* segmented-middle-selected.png */,
-				BAC2812D046BD891137DA99D /* navbar@2x.png */,
-				BAC28F31A198C097DF2CD2EC /* segmented-right-selected.png */,
-				BAC281E0D409591360E33DC6 /* segmented-right@2x.png */,
-				BAC28EA0A7637E563064E542 /* navbutton.png */,
-				BAC28BE986AC0185ADD87195 /* tabbar@2x.png */,
 				BAC286C15A9961D18176E4D4 /* cellbackground.png */,
+				BAC28083A624DB836B93C564 /* frwd@2x.png */,
+				BAC28491AFF694EC9D5F6C39 /* back.png */,
+				BAC28D3318702D6DFD98FC5C /* frwd.png */,
+				BAC2839D3A087E18873F1C2A /* back@2x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -420,6 +409,10 @@
 				8CC644A417488341005BFB5E /* ScheduleVC.m */,
 				8CC644A917488351005BFB5E /* SpeakersVC.h */,
 				8CC644AA17488351005BFB5E /* SpeakersVC.m */,
+				8CEDB57E174898540076FC52 /* SpeakerVC.h */,
+				8CEDB57F174898540076FC52 /* SpeakerVC.m */,
+				8CEDB58817489D100076FC52 /* BrowserVC.h */,
+				8CEDB58917489D100076FC52 /* BrowserVC.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -445,6 +438,8 @@
 				BAC284DD08C5D2EE46F6A51C /* SessionVC.xib */,
 				BAC28532F30DF2B654CC60BD /* SpeakersVC.xib */,
 				BAC284DD29935146141AA88A /* ScheduleVC.xib */,
+				BAC28CCE5A6997DD7F439D1C /* SpeakerVC.xib */,
+				BAC28D2C9622F33D4A62F6BD /* BrowserVC.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -670,21 +665,16 @@
 				8CD13B391747E1F3003043C6 /* pgh-tech-fest-logo-cc.png in Resources */,
 				8CD13B3B1747E210003043C6 /* icon.png in Resources */,
 				8CD13B3D1747E213003043C6 /* icon@2x.png in Resources */,
-				BAC289AE3336B6C9366A26D6 /* segmented-left-selected.png in Resources */,
-				BAC28BCCA51664BCCA08A105 /* back.png in Resources */,
-				BAC286F4289F23D1978BD37E /* tabbar-selected.png in Resources */,
-				BAC28C4A61BA706F748CD481 /* segmented-middle@2x.png in Resources */,
-				BAC28C6F84436AF73883F162 /* segmented-left@2x.png in Resources */,
-				BAC281D237EFFB4C262AF78E /* segmented-middle-selected.png in Resources */,
-				BAC2860B7036A5784DDFB5FE /* navbar@2x.png in Resources */,
-				BAC28CB5028B770CF77BCEBA /* segmented-right-selected.png in Resources */,
-				BAC28AB78544E9D77926767B /* segmented-right@2x.png in Resources */,
-				BAC28986420BD1216AAF449C /* navbutton.png in Resources */,
-				BAC286B67A83577FFE3E5155 /* tabbar@2x.png in Resources */,
 				BAC288D8ECA6976BD13A2F55 /* cellbackground.png in Resources */,
 				BAC2822CF0039D9E2EA36C70 /* SessionVC.xib in Resources */,
 				BAC28A625E08FCBDDF20655D /* SpeakersVC.xib in Resources */,
 				BAC28CB4EFB19C54D2CC92BD /* ScheduleVC.xib in Resources */,
+				BAC285BCE279207B55446859 /* SpeakerVC.xib in Resources */,
+				BAC28CCB34C70D716256B21B /* BrowserVC.xib in Resources */,
+				BAC286CAB07948B888FEC7D4 /* frwd@2x.png in Resources */,
+				BAC286B0166359ACBA6E051D /* back.png in Resources */,
+				BAC2888974F90103D96DD41D /* frwd.png in Resources */,
+				BAC28863593622C225D83C15 /* back@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -738,6 +728,8 @@
 				BAC28F37299059DDA48353BA /* MyScheduleRepository.m in Sources */,
 				BAC28CFDEC1582A2E6E397E2 /* Scheduled.m in Sources */,
 				BAC28136DBDCDBE150696734 /* MyScheduledSessionDisplayService.m in Sources */,
+				8CEDB581174898540076FC52 /* SpeakerVC.m in Sources */,
+				8CEDB58B17489D100076FC52 /* BrowserVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
