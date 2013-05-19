@@ -26,7 +26,7 @@
 
 -(void) complete {
     NSTimeInterval wait = [NSDate.now timeIntervalSinceDate: start];
-    if (wait < 3) {
+    if (wait < 1) {
         [self performSelector: @selector(complete) withObject: nil afterDelay: wait];
         return;
     }

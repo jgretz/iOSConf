@@ -9,7 +9,9 @@
 #import "AppDelegate.h"
 #import "ContainerConfig.h"
 #import "SplashVC.h"
-#import "MainVC.h"
+#import "SessionsVC.h"
+#import "ScheduleVC.h"
+#import "SpeakersVC.h"
 
 @implementation AppDelegate
 
@@ -21,7 +23,14 @@
 
     SplashVC* vc = [SplashVC object];
     vc.loadComplete = ^{
-        self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController: [MainVC object]];
+        UITabBarController* tabBar = [[UITabBarController alloc] init];
+        tabBar.viewControllers = @[
+                [[UINavigationController alloc] initWithRootViewController: [SessionsVC object]],
+                [[UINavigationController alloc] initWithRootViewController: [ScheduleVC object]],
+                [[UINavigationController alloc] initWithRootViewController: [SpeakersVC object]]
+        ];
+
+        self.window.rootViewController = tabBar;
     };
     self.window.rootViewController = vc;
 
