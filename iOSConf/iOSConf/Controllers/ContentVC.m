@@ -15,8 +15,6 @@
 
     self.navigationController.navigationBar.tintColor = [UIColor brownColor];
     self.tabBarController.tabBar.tintColor = [UIColor brownColor];
-
-    [[UITabBarItem appearance] setTitleTextAttributes:@{ UITextAttributeTextColor : [UIColor whiteColor] } forState:UIControlStateNormal];
 }
 
 @end

@@ -22,20 +22,32 @@
     [[ContainerConfig object] configure];
 
     SplashVC* vc = [SplashVC object];
-    vc.loadComplete = ^{
-        UITabBarController* tabBar = [[UITabBarController alloc] init];
-        tabBar.viewControllers = @[
-                [[UINavigationController alloc] initWithRootViewController: [SessionsVC object]],
-                [[UINavigationController alloc] initWithRootViewController: [ScheduleVC object]],
-                [[UINavigationController alloc] initWithRootViewController: [SpeakersVC object]]
-        ];
-
-        self.window.rootViewController = tabBar;
-    };
+    vc.loadComplete = ^{ [self loadComplete]; };
     self.window.rootViewController = vc;
 
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+-(void) loadComplete {
+    UINavigationController*(^makeNav)(UIViewController*, UIImage*) = ^(UIViewController* root, UIImage* image) {
+        UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController: root];
+
+        nav.tabBarItem.image = image;
+        [nav.tabBarItem setTitleTextAttributes: @{ UITextAttributeTextColor : [UIColor whiteColor] } forState: UIControlStateNormal];
+        [nav.tabBarItem setTitleTextAttributes: @{ UITextAttributeTextColor : [UIColor blackColor] } forState: UIControlStateSelected];
+
+        return nav;
+    };
+
+    UITabBarController* tabBar = [[UITabBarController alloc] init];
+    tabBar.viewControllers = @[
+            makeNav([SessionsVC object], [UIImage imageNamed: @"sessions.png"]),
+            makeNav([ScheduleVC object], [UIImage imageNamed: @"schedule.png"]),
+            makeNav([SpeakersVC object], [UIImage imageNamed: @"speakers.png"])
+    ];
+
+    self.window.rootViewController = tabBar;
 }
 
 @end

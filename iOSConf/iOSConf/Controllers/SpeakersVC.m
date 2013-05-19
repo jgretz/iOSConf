@@ -14,6 +14,7 @@
 
 @interface SpeakersVC()<UITableViewDataSource, UITableViewDelegate>
 
+@property (strong) UISegmentedControl* sortSegmentedControl;
 @property (strong) SpeakerRepository* speakerRepository;
 @property (strong) NSDictionary* speakers;
 @property (strong) NSArray* speakerSections;
@@ -32,6 +33,8 @@
 -(void) viewDidLoad {
     [super viewDidLoad];
 
+    self.navigationItem.titleView = [self createSortSegmentedControl];
+
     self.speakersTable.layer.cornerRadius = 8;
     self.speakersTable.sectionIndexColor = [UIColor whiteColor];
 
@@ -42,6 +45,17 @@
     [self performBlockInBackground: ^{
         [self sortSpeakers];
     }];
+}
+
+-(UISegmentedControl*) createSortSegmentedControl {
+    self.sortSegmentedControl = [[UISegmentedControl alloc] initWithItems: @[ @"First Name", @"Last Name" ]];
+    self.sortSegmentedControl.selectedSegmentIndex = 0;
+    self.sortSegmentedControl.segmentedControlStyle = UISegmentedControlStyleBar;
+    self.sortSegmentedControl.tintColor = self.navigationController.navigationBar.tintColor;
+
+    [self.sortSegmentedControl addTarget: self action: @selector(sortSpeakers) forControlEvents: UIControlEventValueChanged];
+
+    return self.sortSegmentedControl;
 }
 
 -(void) dealloc {
@@ -99,8 +113,22 @@
     NSMutableSet* speakerSet = [NSMutableSet set];
     NSMutableDictionary* speakers = [NSMutableDictionary dictionary];
 
+    NSString*(^getSort)(NSString*) = ^(NSString* value) {
+        NSArray* split = [value componentsSeparatedByString: @" "];
+
+        switch (self.sortSegmentedControl.selectedSegmentIndex) {
+            case 0:
+                return (NSString*) split[0];
+
+            case 1:
+                return (NSString*) split[split.count - 1];
+        }
+
+        return value;
+    };
+
     for (Speaker* speaker in self.speakerRepository.data) {
-        NSString* key = [speaker.name substring: 1 start: 0];
+        NSString* key = [[getSort(speaker.name) substring: 1 start: 0] uppercaseString];
 
         [speakerSet addObject: key];
 
@@ -117,6 +145,10 @@
 
     for (NSString* key in self.speakers) {
         [speakers[key] sortUsingComparator: ^NSComparisonResult(Speaker* obj1, Speaker* obj2) {
+            NSComparisonResult result = [getSort(obj1.name) compare: getSort(obj2.name)];
+            if (result != NSOrderedSame)
+                return result;
+
             return [obj1.name compare: obj2.name];
         }];
     }

@@ -19,8 +19,9 @@
 @implementation ScheduleVC
 
 -(id) init {
-    if ((self = [super init]))
+    if ((self = [super init])) {
         self.title = @"My Schedule";
+    }
 
     return self;
 }

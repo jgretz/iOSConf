@@ -25,8 +25,15 @@
 }
 
 -(void) complete {
+#if DEBUG
+    int waitTime = 0;
+#else
+    int waitTime = 3;
+#endif
+
+
     NSTimeInterval wait = [NSDate.now timeIntervalSinceDate: start];
-    if (wait < 1) {
+    if (wait < waitTime) {
         [self performSelector: @selector(complete) withObject: nil afterDelay: wait];
         return;
     }

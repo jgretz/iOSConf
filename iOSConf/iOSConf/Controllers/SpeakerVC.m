@@ -19,10 +19,16 @@
     [super viewDidLoad];
 
     self.name.text = self.speaker.name;
-    self.twitter.text = [NSString stringWithFormat: @"Twitter: @%@", self.speaker.twitter];
-    self.blog.text = self.speaker.blog;
-    self.github.text = [NSString stringWithFormat: @"Github: %@", self.speaker.github];
     self.bio.text = self.speaker.bio;
+
+    if (self.speaker.twitter && self.speaker.twitter.length > 0)
+        self.twitter.text = [NSString stringWithFormat: [self.speaker.twitter startsWith: @"@"] ? @"Twitter: %@" : @"Twitter: @%@", self.speaker.twitter];
+
+    if (self.speaker.blog && self.speaker.blog.length > 0)
+        self.blog.text = self.speaker.blog;
+
+    if (self.speaker.github && self.speaker.github.length > 0)
+        self.github.text = [NSString stringWithFormat: @"Github: %@", self.speaker.github];
 }
 
 #pragma mark - Actions
@@ -39,6 +45,9 @@
 }
 
 -(void) showBrowser: (NSString*) url {
+    if (!url || url.length == 0)
+        return;
+
     BrowserVC* vc = [BrowserVC object];
     vc.url = url;
 
