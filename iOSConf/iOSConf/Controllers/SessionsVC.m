@@ -130,7 +130,9 @@
             self.sessions = sessions;
 
             [self.sessionsTable reloadData];
-            [self.sessionsTable scrollToRowAtIndexPath: [NSIndexPath indexPathForRow: 0 inSection: 0] atScrollPosition: UITableViewScrollPositionTop animated: NO];
+
+            if (sessions.count > 0)
+                [self.sessionsTable scrollToRowAtIndexPath: [NSIndexPath indexPathForRow: 0 inSection: 0] atScrollPosition: UITableViewScrollPositionTop animated: NO];
         }
     }];
 }

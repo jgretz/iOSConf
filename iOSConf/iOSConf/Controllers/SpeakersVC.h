@@ -10,4 +10,7 @@
 
 @interface SpeakersVC : ContentVC
 
+@property (strong) IBOutlet UITableView* speakersTable;
+@property (strong) IBOutlet UIActivityIndicatorView* activityIndicator;
+
 @end
