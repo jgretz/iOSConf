@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C0BF1701750452300243897 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C0BF16F1750452300243897 /* Default.png */; };
+		8C0BF1731750452400243897 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C0BF1721750452400243897 /* Default@2x.png */; };
+		8C0BF1751750452900243897 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C0BF1741750452900243897 /* Default-568h@2x.png */; };
 		8CA74BD71747CF000059BD83 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA74BD61747CF000059BD83 /* SystemConfiguration.framework */; };
 		8CA74BD91747CF0A0059BD83 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA74BD81747CF0A0059BD83 /* MobileCoreServices.framework */; };
 		8CA74BDA1747CF1A0059BD83 /* libCereal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA74BD31747CE810059BD83 /* libCereal.a */; };
@@ -29,7 +32,6 @@
 		8CF7C62B1747D1270081658A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF7C62A1747D1270081658A /* libxml2.dylib */; };
 		BAC280346C986785122F9DE5 /* Speaker.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC28393B42D6615328D708C /* Speaker.m */; };
 		BAC280B70DA226D0D5604F73 /* SessionService.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC2896CBD06043E5EBC3D03 /* SessionService.m */; };
-		BAC280C43A6D8954DF408530 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BAC28C4C12F97132AE583199 /* Default.png */; };
 		BAC281197B7FB4B6E56FB290 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC28BADA6C8DE173A87F8EB /* AFPropertyListRequestOperation.m */; };
 		BAC28136DBDCDBE150696734 /* MyScheduledSessionDisplayService.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC280D18D7C13601E0587DA /* MyScheduledSessionDisplayService.m */; };
 		BAC2815EDCB148AF3D1E812D /* AppLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC285DF0F4FDD3F5E88AF17 /* AppLoad.m */; };
@@ -56,7 +58,6 @@
 		BAC2888974F90103D96DD41D /* frwd.png in Resources */ = {isa = PBXBuildFile; fileRef = BAC28D3318702D6DFD98FC5C /* frwd.png */; };
 		BAC288D8ECA6976BD13A2F55 /* cellbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = BAC286C15A9961D18176E4D4 /* cellbackground.png */; };
 		BAC288E98247BA172029609A /* NSDate+String.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC285808D4CC9371ABDA05C /* NSDate+String.m */; };
-		BAC288FE3E960E767A45FC98 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAC28AF3B818C4270059DFD6 /* Default@2x.png */; };
 		BAC289403A18AC9DC6386887 /* SplashVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC286F24711C066D075F909 /* SplashVC.m */; };
 		BAC28966A542704870AF3FAF /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC28F63C3E8C55AB74FCD80 /* AFURLConnectionOperation.m */; };
 		BAC289A14FCCB1A2605067E6 /* ArrayBasedRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC28D42D17E184C75A8DD31 /* ArrayBasedRepository.m */; };
@@ -71,7 +72,6 @@
 		BAC28B955B85883645B3AC74 /* SessionDisplayService.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC282047ABF2D837B209609 /* SessionDisplayService.m */; };
 		BAC28BC4C11107FC46E5F34C /* PghTechFestSpeakerService.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC28DA48171CF8D6FF21C24 /* PghTechFestSpeakerService.m */; };
 		BAC28BC6A811AC28A105E114 /* PghTechFestSessionToSessionMap.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC28E7DD8BB010D4A09D0C3 /* PghTechFestSessionToSessionMap.m */; };
-		BAC28BCFB38A76EF62FB5229 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAC284BB947EBB16DF665275 /* Default-568h@2x.png */; };
 		BAC28BDEB70CA430856A4ED3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BAC28649A027D3CF59A6B92F /* InfoPlist.strings */; };
 		BAC28C2C29CC0900DF722A10 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC28147C894A5B5DCFB3C27 /* UIImageView+AFNetworking.m */; };
 		BAC28C4BBF22F497CBA6E972 /* sessions@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAC284696E0F787D12A137EF /* sessions@2x.png */; };
@@ -128,6 +128,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C0BF16F1750452300243897 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../../Default.png; sourceTree = "<group>"; };
+		8C0BF1721750452400243897 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../../../Default@2x.png"; sourceTree = "<group>"; };
+		8C0BF1741750452900243897 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../../Default-568h@2x.png"; sourceTree = "<group>"; };
 		8CA74BCE1747CE800059BD83 /* Cereal.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Cereal.xcodeproj; path = ../Cereal/Cereal.xcodeproj; sourceTree = "<group>"; };
 		8CA74BD61747CF000059BD83 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8CA74BD81747CF0A0059BD83 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -344,6 +347,9 @@
 		8CD13B2F1747E1F3003043C6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				8C0BF1741750452900243897 /* Default-568h@2x.png */,
+				8C0BF1721750452400243897 /* Default@2x.png */,
+				8C0BF16F1750452300243897 /* Default.png */,
 				8CD13B3C1747E213003043C6 /* icon@2x.png */,
 				8CD13B3A1747E210003043C6 /* icon.png */,
 				8CD13B301747E1F3003043C6 /* background.png */,
@@ -592,9 +598,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8CCCD08917432EEB005EB2EB /* PghtTechFest */ = {
+		8CCCD08917432EEB005EB2EB /* PghTechFest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8CCCD0A717432EEB005EB2EB /* Build configuration list for PBXNativeTarget "PghtTechFest" */;
+			buildConfigurationList = 8CCCD0A717432EEB005EB2EB /* Build configuration list for PBXNativeTarget "PghTechFest" */;
 			buildPhases = (
 				8CCCD08617432EEB005EB2EB /* Sources */,
 				8CCCD08717432EEB005EB2EB /* Frameworks */,
@@ -606,7 +612,7 @@
 				8CA74BDC1747CF3E0059BD83 /* PBXTargetDependency */,
 				8C6B4CBB1747C4100023ADCF /* PBXTargetDependency */,
 			);
-			name = PghtTechFest;
+			name = PghTechFest;
 			productName = iOSConf;
 			productReference = 8CCCD08A17432EEB005EB2EB /* PghtTechFest.app */;
 			productType = "com.apple.product-type.application";
@@ -642,7 +648,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				8CCCD08917432EEB005EB2EB /* PghtTechFest */,
+				8CCCD08917432EEB005EB2EB /* PghTechFest */,
 			);
 		};
 /* End PBXProject section */
@@ -677,9 +683,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAC28BDEB70CA430856A4ED3 /* InfoPlist.strings in Resources */,
-				BAC280C43A6D8954DF408530 /* Default.png in Resources */,
-				BAC288FE3E960E767A45FC98 /* Default@2x.png in Resources */,
-				BAC28BCFB38A76EF62FB5229 /* Default-568h@2x.png in Resources */,
 				8CCCD0C017433336005EB2EB /* SessionsVC.xib in Resources */,
 				8CCCD0CF17433B5A005EB2EB /* SplashVC.xib in Resources */,
 				8CD13B351747E1F3003043C6 /* background.png in Resources */,
@@ -703,6 +706,9 @@
 				BAC2884353EF13B65582A88A /* schedule.png in Resources */,
 				BAC28B32D57B27935FBD2EB7 /* sessions.png in Resources */,
 				8CEDB59E1748AF8C0076FC52 /* powerdByTF-Clear.png in Resources */,
+				8C0BF1701750452300243897 /* Default.png in Resources */,
+				8C0BF1731750452400243897 /* Default@2x.png in Resources */,
+				8C0BF1751750452900243897 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -800,6 +806,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -815,6 +822,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -831,7 +839,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -839,6 +848,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -847,6 +858,7 @@
 		8CCCD0A817432EEB005EB2EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOSConf/iOSConf-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../**";
@@ -856,6 +868,7 @@
 					"-lxml2",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Cereal\"/**";
 				WRAPPER_EXTENSION = app;
 			};
@@ -864,6 +877,7 @@
 		8CCCD0A917432EEB005EB2EB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOSConf/iOSConf-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../**";
@@ -873,6 +887,7 @@
 					"-lxml2",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Cereal\"/**";
 				WRAPPER_EXTENSION = app;
 			};
@@ -890,7 +905,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8CCCD0A717432EEB005EB2EB /* Build configuration list for PBXNativeTarget "PghtTechFest" */ = {
+		8CCCD0A717432EEB005EB2EB /* Build configuration list for PBXNativeTarget "PghTechFest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8CCCD0A817432EEB005EB2EB /* Debug */,
