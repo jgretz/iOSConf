@@ -79,11 +79,6 @@
 
         cell.detailTextLabel.numberOfLines = 4;
         cell.detailTextLabel.textColor = [UIColor whiteColor];
-
-        UIImageView* background = [[UIImageView alloc] initWithFrame: CGRectMake(0, 0, 300, 88)];
-        background.image = [UIImage imageNamed: @"cellbackground.png"];
-        [cell.contentView addSubview: background];
-        [cell.contentView sendSubviewToBack: background];
     }
 
     Session* session = self.sessions[self.sectionTitles[(NSUInteger) indexPath.section]][(NSUInteger) indexPath.row];
@@ -97,8 +92,19 @@
     return cell;
 }
 
--(NSString*) tableView: (UITableView*) tableView titleForHeaderInSection: (NSInteger) section {
-    return self.sectionTitles[(NSUInteger) section];
+-(UIView*) tableView: (UITableView*) tableView viewForHeaderInSection: (NSInteger) section {
+    UIView* header = [[UIView alloc] initWithFrame: CGRectMake(0, 0, 320, 20)];
+    header.backgroundColor = [UIColor brownColor];
+
+    UILabel* label = [[UILabel alloc] initWithFrame: CGRectMake(10, 4, 300, 15)];
+    label.font = [UIFont fontWithName: @"Helvetica-Bold" size: 16];
+    label.text = self.sectionTitles[(NSUInteger) section];
+    label.backgroundColor = [UIColor brownColor];
+    label.textColor = [UIColor whiteColor];
+
+    [header addSubview: label];
+
+    return header;
 }
 
 -(CGFloat) tableView: (UITableView*) tableView heightForRowAtIndexPath: (NSIndexPath*) indexPath {

@@ -7,7 +7,6 @@
 
 
 #import "SessionDisplayService.h"
-#import "Session.h"
 #import "NSDate+String.h"
 
 @interface SessionDisplayService()
@@ -37,10 +36,12 @@
                 title = session.track;
                 break;
 
-            case SessionGroupingName:
-                title = @"";
+            default:
                 break;
         }
+
+        if (!title)
+            title = @"";
 
         [runningTitles addObject: title];
 
@@ -83,19 +84,27 @@
 }
 
 -(NSString*) buildDetailForSession: (Session*) session forGrouping: (SessionGrouping) grouping {
-    NSString* detail = [NSString stringWithFormat: @"%@\n%@", session.speakerName, session.room];
+    NSString*(^appendString)(NSString*,NSString*) = ^(NSString* original, NSString* value) {
+        if (value)
+            return [original stringByAppendingFormat: @"\n%@", value];
+        return original;
+    };
+
+    NSString* detail = session.speakerName ? session.speakerName : @"";
+    detail = appendString(detail, session.room);
+
     switch (grouping) {
         case SessionGroupingTime:
-            detail = [detail stringByAppendingFormat: @"\n%@", session.track];
+            detail = appendString(detail, session.track);
             break;
 
         case SessionGroupingTrack:
-            detail = [detail stringByAppendingFormat: @"\n%@", session.time.timeString];
+            detail = appendString(detail, session.time.timeString);
             break;
 
         case SessionGroupingName:
-            detail = [detail stringByAppendingFormat: @"\n%@", session.track];
-            detail = [detail stringByAppendingFormat: @"\n%@", session.time.timeString];
+            detail = appendString(detail, session.track);
+            detail = appendString(detail, session.time.timeString);
             break;
     }
 
