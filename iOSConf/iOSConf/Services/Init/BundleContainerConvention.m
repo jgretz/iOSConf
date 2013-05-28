@@ -19,7 +19,7 @@
 -(id) init {
     if ((self = [super init])) {
         NSString* bundleIdentifier = [NSBundle mainBundle].bundleIdentifier;
-        if ([bundleIdentifier isEqual: @"com.truefitsolutions.PghtTechFest"]) {
+        if ([bundleIdentifier isEqual: @"com.truefitsolutions.PghTechFest"]) {
             prefix = @"PghTechFest";
         }
     }

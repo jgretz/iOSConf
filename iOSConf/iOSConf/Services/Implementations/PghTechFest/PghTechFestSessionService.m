@@ -34,10 +34,12 @@
                                     }
                                     failure: ^(NSURLRequest* request, NSHTTPURLResponse* response, NSError* error, id JSON) {
                                         [self performBlockInMainThread: ^{
-                                            [[[UIAlertView alloc] initWithTitle: @"Error Retrieving Sesssion Data"
-                                                                        message: [NSString stringWithFormat: @"%@", error]
-                                                                       delegate: nil
-                                                              cancelButtonTitle: @"OK" otherButtonTitles: nil] show];
+                                            if (self.sessionRepository.data.count == 0) {
+                                                NSString* json = [NSString stringWithContentsOfFile: [Path subBundle:@"pghtechfestsessions.json"] encoding: NSUTF8StringEncoding error: nil];
+                                                
+                                                PghTechFestApiSessions* list = [self.serializer create: [PghTechFestApiSessions class] fromString: json];
+                                                [self updateSessions: list.sessions];
+                                            }
                                         }];
                                     }];
     [operation start];

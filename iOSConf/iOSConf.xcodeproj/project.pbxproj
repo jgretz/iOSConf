@@ -16,6 +16,8 @@
 		8CC6449817487CE6005BFB5E /* SessionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC6449617487CE6005BFB5E /* SessionVC.m */; };
 		8CC644A617488341005BFB5E /* ScheduleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC644A417488341005BFB5E /* ScheduleVC.m */; };
 		8CC644AC17488351005BFB5E /* SpeakersVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC644AA17488351005BFB5E /* SpeakersVC.m */; };
+		8CCC0B32175436B50039856B /* pghtechfestsessions.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CCC0B30175436B50039856B /* pghtechfestsessions.json */; };
+		8CCC0B33175436B50039856B /* pghtechfestspeakers.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CCC0B31175436B50039856B /* pghtechfestspeakers.json */; };
 		8CCCD08E17432EEB005EB2EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CCCD08D17432EEB005EB2EB /* UIKit.framework */; };
 		8CCCD09017432EEB005EB2EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CCCD08F17432EEB005EB2EB /* Foundation.framework */; };
 		8CCCD09217432EEB005EB2EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CCCD09117432EEB005EB2EB /* CoreGraphics.framework */; };
@@ -140,7 +142,9 @@
 		8CC644A417488341005BFB5E /* ScheduleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleVC.m; sourceTree = "<group>"; };
 		8CC644A917488351005BFB5E /* SpeakersVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakersVC.h; sourceTree = "<group>"; };
 		8CC644AA17488351005BFB5E /* SpeakersVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakersVC.m; sourceTree = "<group>"; };
-		8CCCD08A17432EEB005EB2EB /* PghtTechFest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PghtTechFest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CCC0B30175436B50039856B /* pghtechfestsessions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pghtechfestsessions.json; sourceTree = "<group>"; };
+		8CCC0B31175436B50039856B /* pghtechfestspeakers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pghtechfestspeakers.json; sourceTree = "<group>"; };
+		8CCCD08A17432EEB005EB2EB /* PghTechFest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PghTechFest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CCCD08D17432EEB005EB2EB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8CCCD08F17432EEB005EB2EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8CCCD09117432EEB005EB2EB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -288,6 +292,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		8CCC0B2F175436B50039856B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8CCC0B30175436B50039856B /* pghtechfestsessions.json */,
+				8CCC0B31175436B50039856B /* pghtechfestspeakers.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		8CCCD08117432EEB005EB2EB = {
 			isa = PBXGroup;
 			children = (
@@ -300,7 +313,7 @@
 		8CCCD08B17432EEB005EB2EB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8CCCD08A17432EEB005EB2EB /* PghtTechFest.app */,
+				8CCCD08A17432EEB005EB2EB /* PghTechFest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -498,6 +511,7 @@
 		BAC287A846C2843E85800A90 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8CCC0B2F175436B50039856B /* Data */,
 				8CD13B2F1747E1F3003043C6 /* Images */,
 				BAC2875EC586CABFFF3BCA24 /* Supporting Files */,
 			);
@@ -507,10 +521,10 @@
 		BAC2882C631AA7B1BEEBCEA2 /* PghTechFest */ = {
 			isa = PBXGroup;
 			children = (
-				BAC28DA48171CF8D6FF21C24 /* PghTechFestSpeakerService.m */,
 				BAC28B19009A5B88970C9036 /* PghTechFestSpeakerService.h */,
-				BAC2893BE3E72F1177E4CC78 /* PghTechFestSessionService.m */,
+				BAC28DA48171CF8D6FF21C24 /* PghTechFestSpeakerService.m */,
 				BAC2895401B1FBACFB299B9E /* PghTechFestSessionService.h */,
+				BAC2893BE3E72F1177E4CC78 /* PghTechFestSessionService.m */,
 			);
 			path = PghTechFest;
 			sourceTree = "<group>";
@@ -554,12 +568,12 @@
 			children = (
 				BAC288210E7A27A08E510CAB /* ContainerConfig.h */,
 				BAC28952AF32C4F842EEBF8A /* ContainerConfig.m */,
-				BAC285DF0F4FDD3F5E88AF17 /* AppLoad.m */,
 				BAC2834E0CC60B4CE89C6C1C /* AppLoad.h */,
-				BAC28E294BB230F0E82E43DC /* BundleContainerConvention.m */,
+				BAC285DF0F4FDD3F5E88AF17 /* AppLoad.m */,
 				BAC28CDDED639C3635152853 /* BundleContainerConvention.h */,
-				BAC2849911A02D39B48A86D9 /* MappingConfiguration.m */,
+				BAC28E294BB230F0E82E43DC /* BundleContainerConvention.m */,
 				BAC28748D056A6C6216BF879 /* MappingConfiguration.h */,
+				BAC2849911A02D39B48A86D9 /* MappingConfiguration.m */,
 			);
 			path = Init;
 			sourceTree = "<group>";
@@ -614,7 +628,7 @@
 			);
 			name = PghTechFest;
 			productName = iOSConf;
-			productReference = 8CCCD08A17432EEB005EB2EB /* PghtTechFest.app */;
+			productReference = 8CCCD08A17432EEB005EB2EB /* PghTechFest.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -709,6 +723,8 @@
 				8C0BF1701750452300243897 /* Default.png in Resources */,
 				8C0BF1731750452400243897 /* Default@2x.png in Resources */,
 				8C0BF1751750452900243897 /* Default-568h@2x.png in Resources */,
+				8CCC0B32175436B50039856B /* pghtechfestsessions.json in Resources */,
+				8CCC0B33175436B50039856B /* pghtechfestspeakers.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

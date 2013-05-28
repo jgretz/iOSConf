@@ -34,12 +34,12 @@
                                         [self updateSpeaker: list.presenters];
                                     }
                                     failure: ^(NSURLRequest* request, NSHTTPURLResponse* response, NSError* error, id JSON) {
-                                        [self performBlockInMainThread: ^{
-                                            [[[UIAlertView alloc] initWithTitle: @"Error Retrieving Speaker Data"
-                                                                        message: [NSString stringWithFormat: @"%@", error]
-                                                                       delegate: nil
-                                                              cancelButtonTitle: @"OK" otherButtonTitles: nil] show];
-                                        }];
+                                        if (self.speakerRepository.data.count == 0) {
+                                            NSString* json = [NSString stringWithContentsOfFile: [Path subBundle:@"pghtechfestspeakers.json"] encoding: NSUTF8StringEncoding error: nil];
+                                            
+                                            PghTechFestApiSpeakers* list = [self.serializer create: [PghTechFestApiSpeakers class] fromString: json];
+                                            [self updateSpeaker: list.presenters];
+                                        }
                                     }];
     [operation start];
 }
