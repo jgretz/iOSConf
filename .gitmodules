@@ -1,6 +1,0 @@
-[submodule "AFNetworking"]
-	path = AFNetworking
-	url = https://github.com/AFNetworking/AFNetworking.git
-[submodule "Cereal"]
-	path = Cereal
-	url = https://github.com/jgretz/Cereal.git
