@@ -1,0 +1,6 @@
+[submodule "submodules/CoreMeta"]
+	path = submodules/CoreMeta
+	url = https://github.com/jgretz/CoreMeta.git
+[submodule "submodules/Alamofire"]
+	path = submodules/Alamofire
+	url = https://github.com/Alamofire/Alamofire.git
