@@ -21,16 +21,10 @@ class Session: NSObject, Decerealizable {
     // Deserialization
     //*****************
 
-    func typeFor(propertyName: String, value: AnyObject?) -> AnyClass {
-        switch propertyName {
-        case "speakers":
-            return Speaker.self
-        default:
-            if (value != nil) {
-                return value!.dynamicType
-            }
-            return NSObject.self
-        }
+    func typeFor(propertyName: String, value: AnyObject?) -> AnyClass? {
+        return [
+                "speakers": Speaker.self
+        ][propertyName]
     }
 
     func shouldDeserializeProperty(propertyName: String) -> Bool {
