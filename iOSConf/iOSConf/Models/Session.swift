@@ -6,7 +6,7 @@
 import Foundation
 import Cereal
 
-class Session: NSObject, Cerealizable {
+class Session: NSObject, Decerealizable {
     var abstract: String?
     var category: String?
     var id: Int?
@@ -16,22 +16,6 @@ class Session: NSObject, Cerealizable {
     var sessionTime: NSDate?
     var sessionStartTime: NSDate?
     var sessionEndTime: NSDate?
-
-    //***************
-    // Serialization
-    //***************
-
-    func shouldSerializeProperty(propertyName: String) -> Bool {
-        return true
-    }
-
-    func overrideSerializeProperty(propertyName: String) -> Bool {
-        return false
-    }
-
-    func serializeProperty(propertyName: String) -> AnyObject? {
-        return nil
-    }
 
     //*****************
     // Deserialization
