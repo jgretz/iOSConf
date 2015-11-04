@@ -5,11 +5,23 @@
 
 import Foundation
 import Alamofire
+import Cereal
 
 class CodeMashSessionService : NSObject, SessionService {
-    func getAll() -> Array<Session> {
-        Alamofire.request(.GET, "https://cmprod-speakers.azurewebsites.net/api/sessionsdata").responseJSON { response in debugPrint(response) }
+    var serializer:JsonCerealizer?
 
-        return []
+    func loadAll() {
+        Alamofire.request(.GET, "https://cmprod-speakers.azurewebsites.net/api/sessionsdata").responseString { (response) in
+            if (!response.result.isSuccess) {
+                return
+            }
+
+            let json = response.result.value!
+            let sessions = self.serializer!.create(Session.self, fromString: json) as! Array<Session>
+
+            for session in sessions {
+                debugPrint(session.abstract)
+            }
+        }
     }
 }

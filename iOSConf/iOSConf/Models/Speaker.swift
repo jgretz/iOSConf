@@ -9,5 +9,5 @@ class Speaker : NSObject {
     var id:String?
     var firstName:String?
     var lastName:String?
-    var avatarUrl:String?
+    var gravatarUrl:String?
 }

@@ -4,9 +4,12 @@
 //
 
 import Foundation
+import Cereal
 
-class CodemashContainerConfiguration : NSObject, ContainerConfiguration {
+class CodemashContainerConfiguration: NSObject, ContainerConfiguration {
     func configure() {
         CodeMashSessionService.registerClassAsProtocol(SessionService.self)
+
+        JsonCerealizer.register()
     }
 }

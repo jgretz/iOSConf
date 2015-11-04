@@ -9,6 +9,6 @@ class AppLoadService: NSObject {
     var sessionService:SessionService?
 
     func loadApp() {
-        sessionService!.getAll()
+        sessionService!.loadAll()
     }
 }

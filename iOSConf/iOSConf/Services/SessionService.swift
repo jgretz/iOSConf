@@ -6,5 +6,5 @@
 import Foundation
 
 @objc protocol SessionService {
-    func getAll() -> Array<Session>
+    func loadAll()
 }
