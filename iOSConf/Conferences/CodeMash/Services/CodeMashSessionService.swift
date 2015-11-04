@@ -16,12 +16,8 @@ class CodeMashSessionService : NSObject, SessionService {
                 return
             }
 
-            let json = response.result.value!
+            let json:String = response.result.value!
             let sessions = self.serializer!.create(Session.self, fromString: json) as! Array<Session>
-
-            for session in sessions {
-                debugPrint(session.abstract)
-            }
         }
     }
 }

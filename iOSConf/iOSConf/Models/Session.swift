@@ -13,6 +13,9 @@ class Session: NSObject, Cerealizable {
     var sessionType: String?
     var speakers: Array<Speaker>?
     var tags: Array<String>?
+    var sessionTime: NSDate?
+    var sessionStartTime: NSDate?
+    var sessionEndTime: NSDate?
 
     //***************
     // Serialization
@@ -51,9 +54,18 @@ class Session: NSObject, Cerealizable {
     }
 
     func overrideDeserializeProperty(propertyName: String, value: AnyObject?) -> Bool {
-        return false
+        return [ "sessionTime", "sessionStartTime", "sessionEndTime" ].any({$0 == propertyName})
     }
 
     func deserializeProperty(propertyName: String, value: AnyObject?) {
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "yyyy-dd-mm HH:mm:ss"
+
+        let cleanString = (value as! String).stringByReplacingOccurrencesOfString("T", withString: " ")
+        let time = formatter.dateFromString(cleanString)
+
+        if (time != nil) {
+            self.setValue(time, forKey: propertyName)
+        }
     }
 }
